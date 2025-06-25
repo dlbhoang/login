@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{/layout/site}">
+<body>
+    <div layout:fragment="content">
+        <div class="text-center p-5">
+            <h1 class="display-4 text-primary" th:text="${title}">Chào mừng đến với ShopGuard</h1>
+            <p class="lead">Hệ thống bán hàng đơn giản, tích hợp kiểm thử bảo mật.</p>
+            <a class="btn btn-primary btn-lg" th:href="@{/products}">Xem sản phẩm</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+    <div th:fragment="siteHeader">
+        <header style="background-color: #2a9fd6; color: #fff; padding: 12px;">
+            <h1 style="margin: 0;">ShopGuard</h1>
+            <nav style="margin-top: 8px;">
+                <a th:href="@{/}" style="color: #fff; margin-right: 15px; text-decoration: none;">Trang chủ</a>
+                <a th:href="@{/about}" style="color: #fff; margin-right: 15px; text-decoration: none;">Giới thiệu</a>
+                <a th:href="@{/products}" style="color: #fff; margin-right: 15px; text-decoration: none;">Sản phẩm</a>
+                <a th:href="@{/login}" style="color: #fff; text-decoration: none;">Đăng nhập</a>
+            </nav>
+        </header>
+    </div>
+</body>
+</html>

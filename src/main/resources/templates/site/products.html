@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{/layout/site}">
+<body>
+    <div layout:fragment="content">
+        <section class="p-3">
+            <h2 class="text-primary" th:text="${title}">Danh sách sản phẩm</h2>
+            <table class="table table-striped text-center mt-3">
+                <thead class="table-info">
+                    <tr>
+                        <th>ID</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Mô tả</th>
+                        <th>Giá</th>
+                        <th>Số lượng</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="product : ${products}">
+                        <td th:text="${product.id}">1</td>
+                        <td th:text="${product.name}">Laptop</td>
+                        <td th:text="${product.description}">Mô tả</td>
+                        <td th:text="${product.price} + ' đ'">1000 đ</td>
+                        <td th:text="${product.quantity}">10</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+</body>
+</html>
